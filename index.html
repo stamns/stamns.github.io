@@ -3,23 +3,119 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sou.gs 镜像站</title>
+<title>小豆搜索 镜像站</title>
 <style>
-  body { font-family: system-ui; text-align: center; padding: 50px; }
-  a { color: #0066cc; margin: 0 10px; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  .container {
+    background: white;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .subtitle {
+    color: #666;
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+  .nav-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+  .btn.secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  }
+  .footer {
+    margin-top: 32px;
+    color: #999;
+    font-size: 12px;
+  }
+  .loading {
+    display: none;
+    color: #667eea;
+    margin-top: 20px;
+    font-size: 14px;
+  }
 </style>
 </head>
 <body>
-<h1>小豆搜索 镜像站</h1>
-<p><a href="/sou.gs/">首页</a> | <a href="/sou.gs/search/">搜索</a></p>
+<div class="container">
+  <h1>小豆搜索</h1>
+  <p class="subtitle">云存储工具与公开信息导航 · 镜像站</p>
+  <div class="nav-buttons">
+    <a href="/sou.gs/" class="btn">访问首页</a>
+    <a href="/sou.gs/search/index.html" class="btn secondary">资源搜索</a>
+  </div>
+  <div class="loading" id="loading">正在跳转...</div>
+  <p class="footer">Powered by MirrorKit · 静态镜像</p>
+</div>
 <script>
-  // 客户端路由重定向
-  const path = window.location.pathname;
-  if (path === '/search' || path === '/search/') {
-    window.location.replace('/sou.gs/search/');
-  } else if (path === '/detail' || path === '/detail/') {
-    window.location.replace('/sou.gs/detail/');
-  }
+  // 客户端路由：自动跳转到正确的镜像路径
+  (function() {
+    var path = window.location.pathname;
+    var target = null;
+
+    // 匹配各种可能的路径
+    if (path === '/search' || path === '/search/' || path === '/search/index.html') {
+      target = '/sou.gs/search/index.html';
+    } else if (path === '/detail' || path === '/detail/') {
+      target = '/sou.gs/detail/index.html';
+    } else if (path === '/' || path === '/index.html') {
+      // 根路径，显示导航页，不自动跳转
+      return;
+    } else if (path.indexOf('/sou.gs/') === 0) {
+      // 已经是正确的镜像路径，不处理
+      return;
+    } else {
+      // 其他路径，尝试在镜像目录中查找
+      target = '/sou.gs' + path;
+    }
+
+    if (target) {
+      document.getElementById('loading').style.display = 'block';
+      window.location.replace(target);
+    }
+  })();
 </script>
 </body>
 </html>
