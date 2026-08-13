@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="icon-search-template">
+  <link rel="stylesheet" href="/themes/icon-search-template/assets/css/theme.css?v=20260701-check-transfer-fallback-r78">
+  <link rel="stylesheet" href="/themes/icon-search-template/assets/css/results.css?v=20260701-check-transfer-fallback-r78">
+  <title>资源搜索 - 盘搜</title>
+  <meta name="description" content="小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。 平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。 内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公">
+  <meta name="keywords" content="小云搜索,yunso.net,阿里盘搜,云搜,网盘搜索,百度网盘搜索,百度云搜索,阿里云盘搜索,夸克云盘搜索,百度云盘,迅雷云盘,天翼云盘,彩和云盘,蓝奏云盘,网盘搜索引擎,网盘搜索神器">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-id" content="icon-search-template">
+  <link rel="canonical" href="https://sou.gs/search">
+  <link rel="icon" href="/themes/icon-search-template/assets/favicon.svg?v=20260701-check-transfer-fallback-r78" type="image/svg+xml">
+  <link rel="alternate icon" href="/themes/icon-search-template/assets/favicon.ico?v=20260701-check-transfer-fallback-r78" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="资源搜索 - 盘搜">
+  <meta property="og:description" content="小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。 平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。 内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公">
+  <meta property="og:site_name" content="资源搜索 - 盘搜">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="资源搜索 - 盘搜">
+  <meta name="twitter:description" content="小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。 平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。 内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公">
+  <meta property="og:image" content="/themes/icon-search-template/assets/favicon.svg?v=20260701-check-transfer-fallback-r78">
+  <meta name="twitter:image" content="/themes/icon-search-template/assets/favicon.svg?v=20260701-check-transfer-fallback-r78">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","description":"小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。 平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。 内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公","name":"资源搜索 - 盘搜","url":"https://sou.gs/search"}</script>
+</head>
+<body>
+  <div class="dialog-root" id="dialogRoot" hidden>
+    <div class="dialog-backdrop" data-dialog-close></div>
+
+    <section class="action-dialog" data-dialog-panel="resource" role="dialog" aria-modal="true" aria-labelledby="resourceDialogTitle">
+      <header class="action-dialog__header">
+        <div>
+          <h2 id="resourceDialogTitle">资源投稿</h2>
+          <p>提交可用资源信息，方便后续整理入库。</p>
+        </div>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="关闭弹窗">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10"></path><path d="m17 7-10 10"></path></svg>
+        </button>
+      </header>
+      <form class="dialog-form" data-dialog-form>
+        <label>资源标题<input name="title" type="text" placeholder="例如：热门电影 4K 合集" required></label>
+        <label>选中网盘类型<select name="source" required><option value="">请选择网盘类型</option><option>磁力</option><option>夸克</option><option>百度</option><option>迅雷</option><option>UC</option><option>播放</option></select></label>
+        <label class="dialog-form__wide">资源链接<textarea name="link" rows="3" placeholder="粘贴资源链接、提取码或磁力链接" required></textarea></label>
+        <label class="dialog-form__wide">资源出处<input name="from" type="text" placeholder="例如：自整理 / 论坛 / 公众号 / 其它来源"></label>
+        <p class="dialog-form__status" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button type="button" class="dialog-secondary" data-dialog-close>取消</button>
+          <button type="submit" class="dialog-primary">提交投稿</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="action-dialog" data-dialog-panel="demand" role="dialog" aria-modal="true" aria-labelledby="demandDialogTitle">
+      <header class="action-dialog__header">
+        <div>
+          <h2 id="demandDialogTitle">提交需求</h2>
+          <p>告诉我们你想找的资源，便于后续补充。</p>
+        </div>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="关闭弹窗">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10"></path><path d="m17 7-10 10"></path></svg>
+        </button>
+      </header>
+      <form class="dialog-form" data-dialog-form>
+        <label>资源名称<input name="name" type="text" placeholder="输入资源名称" required></label>
+        <label>联系方式<input name="contact" type="text" placeholder="QQ / 邮箱 / 微信号"></label>
+        <label class="dialog-form__wide">需求说明<textarea name="description" rows="4" placeholder="补充版本、清晰度、年份或其它要求" required></textarea></label>
+        <p class="dialog-form__status" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button type="button" class="dialog-secondary" data-dialog-close>取消</button>
+          <button type="submit" class="dialog-primary">提交需求</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="action-dialog" data-dialog-panel="player" role="dialog" aria-modal="true" aria-labelledby="playerDialogTitle">
+      <header class="action-dialog__header">
+        <div>
+          <h2 id="playerDialogTitle">播放设置</h2>
+          <p>解析接口仅限本地使用，不上传。</p>
+        </div>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="关闭弹窗">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10"></path><path d="m17 7-10 10"></path></svg>
+        </button>
+      </header>
+      <form class="dialog-form" data-dialog-form="player">
+        <label>解析接口名称<input name="parserName" type="text" placeholder="例如：本地默认接口" required></label>
+        <label class="dialog-form__wide">解析接口<input name="parserUrl" type="url" placeholder="https://example.com/?url=" required></label>
+        <p class="dialog-note">此接口仅限于本地使用，不上传。</p>
+        <p class="dialog-form__status" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button type="button" class="dialog-secondary" data-dialog-close>取消</button>
+          <button type="submit" class="dialog-primary">保存设置</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="theme-transition" id="themeTransition" aria-hidden="true"></div>
+  <div class="theme-toast" id="themeToast" role="status" aria-live="polite"></div>
+
+  <header class="result-topbar">
+    <div class="topbar-main">
+      <a class="topbar-brand" href="/" aria-label="返回首页">
+        <img src="/themes/icon-search-template/assets/logo.png?v=20260701-check-transfer-fallback-r78" alt="SouSeek">
+      </a>
+
+      <form class="serp-search" id="resultsSearchForm" autocomplete="off">
+        <div class="serp-search__shell">
+          <svg class="serp-search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="resultsSearchInput" name="q" type="text" aria-label="搜索关键词" placeholder="搜索网盘资源" autocomplete="off">
+          <button class="serp-clear" type="button" aria-label="清空搜索">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10"></path><path d="m17 7-10 10"></path></svg>
+          </button>
+          <button class="serp-search__submit" type="submit">搜索</button>
+        </div>
+      </form>
+
+      <nav class="topbar-actions" aria-label="快捷操作">
+        <button type="button" data-dialog-open="resource">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 8 5-5 5 5"></path><path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"></path></svg>
+          <span>投稿</span>
+        </button>
+        <button type="button" data-dialog-open="demand">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg>
+          <span>求片</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换夜间模式" aria-pressed="false">
+          <span class="theme-toggle__track">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2"></path><path d="M12 19.5v2"></path><path d="M4.57 4.57 6 6"></path><path d="m18 18 1.43 1.43"></path><path d="M2.5 12h2"></path><path d="M19.5 12h2"></path><path d="M4.57 19.43 6 18"></path><path d="m18 6 1.43-1.43"></path></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 14.4A7.8 7.8 0 0 1 9.6 3.7 8.7 8.7 0 1 0 20.3 14.4Z"></path></svg>
+          </span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="serp-page">
+    <section class="result-column" id="resultBoard">
+      <nav class="serp-tabs" aria-label="搜索来源">
+        <button class="source-chip is-active" type="button" data-drive="">全部</button>
+        <button class="source-chip" type="button" data-drive="seed"><img src="/themes/icon-search-template/assets/zhongzi-dark.svg?v=20260701-check-transfer-fallback-r78" alt="">磁力</button>
+        <button class="source-chip" type="button" data-drive="quark"><img src="/themes/icon-search-template/assets/kuake-dark.svg?v=20260701-check-transfer-fallback-r78" alt="">夸克</button>
+        <button class="source-chip" type="button" data-drive="baidu"><img src="/themes/icon-search-template/assets/icon_baiduwangpan-dark.svg?v=20260701-check-transfer-fallback-r78" alt="">百度</button>
+        <button class="source-chip" type="button" data-drive="xunlei"><img src="/themes/icon-search-template/assets/xunlei1-dark.svg?v=20260701-check-transfer-fallback-r78" alt="">迅雷</button>
+        <button class="source-chip" type="button" data-drive="uc"><img src="/themes/icon-search-template/assets/changyonglogo31-dark.svg?v=20260701-check-transfer-fallback-r78" alt="">UC</button>
+      </nav>
+
+      <header class="results-overview" id="resultSummary" aria-label="搜索状态">
+        <p class="serp-count__label">正在搜索资源...</p>
+        <div class="serp-count__stats" aria-label="资源状态统计">
+          <span>有效资源 0 条</span>
+          <span class="is-invalid">已失效 0 条</span>
+          <span>磁力线路 0 条</span>
+        </div>
+      </header>
+
+      <div id="resultsList" class="serp-results" aria-label="搜索结果"></div>
+      <nav class="serp-pagination" id="resultsPagination" aria-label="搜索结果分页"></nav>
+    </section>
+
+    <aside class="related-panel" aria-label="热门搜索">
+      <section class="related-card">
+        <h2>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 9-13h-6l0-7Z"></path></svg>
+          热门搜索
+        </h2>
+        <div class="hot-search-list" id="hotSearchList" aria-label="热门搜索词">
+          <p class="hot-search-empty">热门搜索加载中...</p>
+        </div>
+      </section>
+
+      <section class="related-card notice-card">
+        <h2>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v6c0 4.4 3.1 7.4 8 8 4.9-.6 8-3.6 8-8V7l-8-4Z"></path><path d="M9 12l2 2 4-5"></path></svg>
+          本站原理
+        </h2>
+        <p>您的请求将通过第三方搜索引擎（如 Bing、Google、百度）获取原始数据，页面内容由系统自动整理与美化生成。本站不产生、不存储任何资源内容，亦未参与录制或上传。若相关结果侵犯您的合法权益，请联系我们，我们将在核实后尽快处理。</p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="serp-footer">
+    <p>Copyright © 2026 sou.gs. All Rights Reserved.</p>
+    <p>本站仅提供公开网盘链接检索服务，不存储、不上传任何资源内容。</p>
+  </footer>
+
+  <script src="/themes/icon-search-template/assets/js/results.js?v=20260701-check-transfer-fallback-r78"></script>
+  <script src="/themes/icon-search-template/assets/js/dialogs.js?v=20260701-check-transfer-fallback-r78"></script>
+  <script src="/themes/icon-search-template/thunder-torrent-bridge.js?v=20260701-check-transfer-fallback-r78"></script>
+<script>
+window.__YD_CONTEXT = JSON.parse("{\"page\":{\"canonical\":\"https://sou.gs/search\",\"file\":\"search.html\",\"kind\":\"search\"},\"request\":{\"host\":\"sou.gs\",\"path\":\"/search\"},\"routes\":{\"detail\":\"/detail/\",\"detail_route\":\"/detail/\",\"enable_new_route\":true,\"route_suffix\":\".html\",\"search\":\"/search/\",\"search_route\":\"/search/\",\"search_route_custom\":false},\"search_config\":{\"check_concurrency\":8,\"hot_limit\":50,\"source_order\":[\"resource\",\"tg\",\"web\",\"submission\",\"torrent\"]},\"site\":{\"base_url\":\"https://sou.gs\",\"copyright\":\"\",\"current_domain\":\"sou.gs\",\"current_path\":\"/search\",\"current_route_detail\":\"/detail/\",\"current_route_enabled\":true,\"current_route_search\":\"/search/\",\"current_route_suffix\":\".html\",\"current_url\":\"https://sou.gs/search\",\"description\":\"小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。  平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。  内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公与效率工具推荐等。  用户只需输入关键词，即可获取相关平台功能说明、使用建议及公开信息索引，帮助更安全、规范地管理与查找云端内容。  本平台仅提供信息导航与技术交流服务，不存储、不上传任何文件内容。\",\"domain\":\"sou.gs\",\"domains\":\"sou.gs,www.sou.gs\",\"enable_custom_id\":true,\"host\":\"sou.gs\",\"icon\":\"/themes/icon-search-template/assets/favicon.svg?v\u003D20260701-check-transfer-fallback-r78\",\"id\":\"site-1780402834042\",\"identity\":{\"domain\":\"sou.gs\",\"random_id\":\"wDyM9aHx\",\"route_signature\":\"search|detail|.html\",\"site_id\":\"site-1780402834042\",\"theme\":\"icon-search-template\"},\"identity_code\":\"wDyM9aHx\",\"keywords\":\"小云搜索,yunso.net,阿里盘搜,云搜,网盘搜索,百度网盘搜索,百度云搜索,阿里云盘搜索,夸克云盘搜索,百度云盘,迅雷云盘,天翼云盘,彩和云盘,蓝奏云盘,网盘搜索引擎,网盘搜索神器,网盘资源搜索,资源搜索,资源分享,云盘资源搜索,阿里云盘资源搜索,迅雷云盘搜索,天翼云盘搜索,彩和云盘搜索,蓝奏云盘搜索\",\"logo\":\"/themes/icon-search-template/assets/logo.png\",\"name\":\"盘搜\",\"random_id\":\"wDyM9aHx\",\"random_id_charset\":\"大写+小写+数字\",\"random_id_enabled\":true,\"random_id_length\":8,\"robots_url\":\"https://sou.gs/robots.txt\",\"route_signature\":\"search|detail|.html\",\"routes\":{\"detail\":\"/detail/\",\"detail_route\":\"/detail/\",\"enable_new_route\":true,\"route_suffix\":\".html\",\"search\":\"/search/\",\"search_route\":\"/search/\",\"search_route_custom\":false},\"seo\":{\"canonical\":\"https://sou.gs/\",\"copyright\":\"\",\"description\":\"小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。  平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。  内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公与效率工具推荐等。  用户只需输入关键词，即可获取相关平台功能说明、使用建议及公开信息索引，帮助更安全、规范地管理与查找云端内容。  本平台仅提供信息导航与技术交流服务，不存储、不上传任何文件内容。\",\"icon\":\"/themes/icon-search-template/assets/favicon.svg?v\u003D20260701-check-transfer-fallback-r78\",\"keywords\":\"小云搜索,yunso.net,阿里盘搜,云搜,网盘搜索,百度网盘搜索,百度云搜索,阿里云盘搜索,夸克云盘搜索,百度云盘,迅雷云盘,天翼云盘,彩和云盘,蓝奏云盘,网盘搜索引擎,网盘搜索神器,网盘资源搜索,资源搜索,资源分享,云盘资源搜索,阿里云盘资源搜索,迅雷云盘搜索,天翼云盘搜索,彩和云盘搜索,蓝奏云盘搜索\",\"logo\":\"/themes/icon-search-template/assets/logo.png\",\"sitemap\":\"https://sou.gs/sitemap.xml\",\"title\":\"小豆搜索 云存储工具与公开信息导航\"},\"site_id\":\"site-1780402834042\",\"site_random_id\":\"wDyM9aHx\",\"sitemap_url\":\"https://sou.gs/sitemap.xml\",\"theme\":\"icon-search-template\",\"theme_base\":\"/themes/icon-search-template\",\"theme_id\":\"icon-search-template\",\"title\":\"小豆搜索 云存储工具与公开信息导航\",\"updated_at\":\"2026-06-19 10:43:24\"},\"theme\":{\"asset_version\":\"20260701-check-transfer-fallback-r78\",\"base_path\":\"/themes/icon-search-template\",\"id\":\"icon-search-template\",\"theme_id\":\"icon-search-template\"}}");
+window.__homePrefetch = JSON.parse("{\"payload\":{\"code\":0,\"data\":{\"blocked_count\":2384,\"categories\":[{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-movie\",\"name\":\"电影\",\"sort\":10,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-28T23:13:55+08:00\",\"id\":\"cat-1777389235801558100\",\"name\":\"短剧\",\"sort\":10,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:55+08:00\"},{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-drama\",\"name\":\"剧集\",\"sort\":20,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-variety\",\"name\":\"综艺\",\"sort\":30,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-29T03:18:21+08:00\",\"id\":\"cat-1777403901891495100\",\"name\":\"漫剧\",\"sort\":50,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:21+08:00\"},{\"created_at\":\"2026-04-29T03:18:36+08:00\",\"id\":\"cat-1777403916988702800\",\"name\":\"动漫\",\"sort\":60,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:36+08:00\"},{\"created_at\":\"2026-04-29T03:18:48+08:00\",\"id\":\"cat-1777403928614727300\",\"name\":\"软件\",\"sort\":70,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:48+08:00\"},{\"created_at\":\"2026-04-29T03:18:57+08:00\",\"id\":\"cat-1777403937099191300\",\"name\":\"课程\",\"sort\":80,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:57+08:00\"}],\"drives\":[{\"count\":0,\"name\":\"夸克网盘\",\"type\":\"quark\"},{\"count\":0,\"name\":\"百度网盘\",\"type\":\"baidu\"},{\"count\":0,\"name\":\"UC 网盘\",\"type\":\"uc\"},{\"count\":0,\"name\":\"迅雷网盘\",\"type\":\"xunlei\"}],\"hot_keywords\":[\"南部档案\",\"莫离\",\"爱情有烟火\",\"翘楚\",\"迷墙\",\"云岫渡\",\"云秀行\",\"低智商犯罪\",\"耀眼\",\"炽夏\",\"家业\",\"藏海传\",\"问心2\",\"野狗骨头\",\"人间有味\",\"逐玉\",\"大唐迷雾\",\"五个失踪的少年\",\"白日提灯\",\"长安的荔枝\",\"神墓年番\",\"丹道至尊\",\"火遮眼\",\"给阿嬷的情书\",\"消失的人\",\"蝴蝶楼·惊魂\",\"诺曼底72小时\",\"午夜车库\",\"玩具总动员5\",\"我看见两朵一样的云\",\"爱是愤怒\",\"四渡\",\"澎湖海战\",\"年会不能停2\",\"小黄人与大怪兽\",\"蜘蛛侠崭新之日\",\"流浪地球3\",\"南部档案全集在线观看\",\"莫离白鹿丞磊全集\",\"爱情有烟火檀健次王楚然\",\"云岫渡迪丽热巴\",\"低智商犯罪紫金陈\",\"火遮眼谢苗完整版\",\"2026新剧推荐\",\"民国悬疑电视剧\",\"古装权谋剧\",\"紫金陈悬疑改编作品\",\"高分国产剧2026\",\"甄嬛传\",\"灵魂摆渡\"],\"hot_searches\":[\"南部档案\",\"莫离\",\"爱情有烟火\",\"翘楚\",\"迷墙\",\"云岫渡\",\"云秀行\",\"低智商犯罪\",\"耀眼\",\"炽夏\",\"家业\",\"藏海传\",\"问心2\",\"野狗骨头\",\"人间有味\",\"逐玉\",\"大唐迷雾\",\"五个失踪的少年\",\"白日提灯\",\"长安的荔枝\",\"神墓年番\",\"丹道至尊\",\"火遮眼\",\"给阿嬷的情书\",\"消失的人\",\"蝴蝶楼·惊魂\",\"诺曼底72小时\",\"午夜车库\",\"玩具总动员5\",\"我看见两朵一样的云\",\"爱是愤怒\",\"四渡\",\"澎湖海战\",\"年会不能停2\",\"小黄人与大怪兽\",\"蜘蛛侠崭新之日\",\"流浪地球3\",\"南部档案全集在线观看\",\"莫离白鹿丞磊全集\",\"爱情有烟火檀健次王楚然\",\"云岫渡迪丽热巴\",\"低智商犯罪紫金陈\",\"火遮眼谢苗完整版\",\"2026新剧推荐\",\"民国悬疑电视剧\",\"古装权谋剧\",\"紫金陈悬疑改编作品\",\"高分国产剧2026\",\"甄嬛传\",\"灵魂摆渡\"],\"resource_categories\":[{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-movie\",\"name\":\"电影\",\"sort\":10,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-28T23:13:55+08:00\",\"id\":\"cat-1777389235801558100\",\"name\":\"短剧\",\"sort\":10,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:55+08:00\"},{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-drama\",\"name\":\"剧集\",\"sort\":20,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-28T23:13:45+08:00\",\"id\":\"cat-variety\",\"name\":\"综艺\",\"sort\":30,\"status\":\"enabled\",\"updated_at\":\"2026-04-28T23:13:45+08:00\"},{\"created_at\":\"2026-04-29T03:18:21+08:00\",\"id\":\"cat-1777403901891495100\",\"name\":\"漫剧\",\"sort\":50,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:21+08:00\"},{\"created_at\":\"2026-04-29T03:18:36+08:00\",\"id\":\"cat-1777403916988702800\",\"name\":\"动漫\",\"sort\":60,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:36+08:00\"},{\"created_at\":\"2026-04-29T03:18:48+08:00\",\"id\":\"cat-1777403928614727300\",\"name\":\"软件\",\"sort\":70,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:48+08:00\"},{\"created_at\":\"2026-04-29T03:18:57+08:00\",\"id\":\"cat-1777403937099191300\",\"name\":\"课程\",\"sort\":80,\"status\":\"enabled\",\"updated_at\":\"2026-04-29T03:18:57+08:00\"}],\"routes\":{\"detail\":\"/detail/\",\"detail_route\":\"/detail/\",\"enable_new_route\":true,\"route_suffix\":\".html\",\"search\":\"/search/\",\"search_route\":\"/search/\",\"search_route_custom\":false},\"search_config\":{\"check_concurrency\":8,\"hot_limit\":50,\"source_order\":[\"resource\",\"tg\",\"web\",\"submission\",\"torrent\"]},\"search_stats\":{\"month_count\":610719,\"today\":7358,\"today_count\":7358,\"total\":1655399,\"total_count\":1655399,\"week_count\":151846,\"yesterday_count\":21854},\"site\":{\"base_url\":\"https://sou.gs\",\"copyright\":\"\",\"current_domain\":\"sou.gs\",\"current_path\":\"/\",\"current_route_detail\":\"/detail/\",\"current_route_enabled\":true,\"current_route_search\":\"/search/\",\"current_route_suffix\":\".html\",\"current_url\":\"https://sou.gs/\",\"description\":\"小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。  平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。  内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公与效率工具推荐等。  用户只需输入关键词，即可获取相关平台功能说明、使用建议及公开信息索引，帮助更安全、规范地管理与查找云端内容。  本平台仅提供信息导航与技术交流服务，不存储、不上传任何文件内容。\",\"domain\":\"sou.gs\",\"domains\":\"sou.gs,www.sou.gs\",\"enable_custom_id\":true,\"host\":\"sou.gs\",\"icon\":\"/themes/icon-search-template/assets/favicon.svg?v\u003D20260701-check-transfer-fallback-r78\",\"id\":\"site-1780402834042\",\"identity\":{\"domain\":\"sou.gs\",\"random_id\":\"wDyM9aHx\",\"route_signature\":\"search|detail|.html\",\"site_id\":\"site-1780402834042\",\"theme\":\"icon-search-template\"},\"identity_code\":\"wDyM9aHx\",\"keywords\":\"小云搜索,yunso.net,阿里盘搜,云搜,网盘搜索,百度网盘搜索,百度云搜索,阿里云盘搜索,夸克云盘搜索,百度云盘,迅雷云盘,天翼云盘,彩和云盘,蓝奏云盘,网盘搜索引擎,网盘搜索神器,网盘资源搜索,资源搜索,资源分享,云盘资源搜索,阿里云盘资源搜索,迅雷云盘搜索,天翼云盘搜索,彩和云盘搜索,蓝奏云盘搜索\",\"logo\":\"/themes/icon-search-template/assets/logo.png\",\"name\":\"盘搜\",\"random_id\":\"wDyM9aHx\",\"random_id_charset\":\"大写+小写+数字\",\"random_id_enabled\":true,\"random_id_length\":8,\"robots_url\":\"https://sou.gs/robots.txt\",\"route_signature\":\"search|detail|.html\",\"routes\":{\"detail\":\"/detail/\",\"detail_route\":\"/detail/\",\"enable_new_route\":true,\"route_suffix\":\".html\",\"search\":\"/search/\",\"search_route\":\"/search/\",\"search_route_custom\":false},\"seo\":{\"canonical\":\"https://sou.gs/\",\"copyright\":\"\",\"description\":\"小豆搜索（sou.gs）是一个专注于云存储工具与公开信息导航的平台，致力于帮助用户更高效地了解和使用主流云盘服务。  平台支持主流云盘相关信息查询与使用指引，包括阿里云盘、夸克网盘、百度网盘、迅雷网盘、蓝奏云、天翼云盘等。  内容涵盖：文件管理技巧、数据备份方案、学习资料获取指引、电子书购买渠道说明、公开资料检索方法、办公与效率工具推荐等。  用户只需输入关键词，即可获取相关平台功能说明、使用建议及公开信息索引，帮助更安全、规范地管理与查找云端内容。  本平台仅提供信息导航与技术交流服务，不存储、不上传任何文件内容。\",\"icon\":\"/themes/icon-search-template/assets/favicon.svg?v\u003D20260701-check-transfer-fallback-r78\",\"keywords\":\"小云搜索,yunso.net,阿里盘搜,云搜,网盘搜索,百度网盘搜索,百度云搜索,阿里云盘搜索,夸克云盘搜索,百度云盘,迅雷云盘,天翼云盘,彩和云盘,蓝奏云盘,网盘搜索引擎,网盘搜索神器,网盘资源搜索,资源搜索,资源分享,云盘资源搜索,阿里云盘资源搜索,迅雷云盘搜索,天翼云盘搜索,彩和云盘搜索,蓝奏云盘搜索\",\"logo\":\"/themes/icon-search-template/assets/logo.png\",\"sitemap\":\"https://sou.gs/sitemap.xml\",\"title\":\"小豆搜索 云存储工具与公开信息导航\"},\"site_id\":\"site-1780402834042\",\"site_random_id\":\"wDyM9aHx\",\"sitemap_url\":\"https://sou.gs/sitemap.xml\",\"theme\":\"icon-search-template\",\"theme_base\":\"/themes/icon-search-template\",\"theme_id\":\"icon-search-template\",\"title\":\"小豆搜索 云存储工具与公开信息导航\",\"updated_at\":\"2026-06-19 10:43:24\"},\"source_order\":[\"resource\",\"tg\",\"web\",\"submission\",\"torrent\"],\"theme\":{\"asset_version\":\"20260701-check-transfer-fallback-r78\",\"base_path\":\"/themes/icon-search-template\",\"id\":\"icon-search-template\",\"theme_id\":\"icon-search-template\"}}},\"ts\":1786596406834}");
+window.__ydTheme = window.__YD_CONTEXT.theme || {};
+window.__ydThemeBase = window.__ydTheme.base_path || "/themes/icon-search-template";
+window.__siteRoutes = window.__YD_CONTEXT.routes || {};
+window.KnifeSearch = window.KnifeSearch || {};
+window.KnifeSearch.theme = window.__ydTheme.id || "icon-search-template";
+window.KnifeSearch.themeBase = window.__ydThemeBase;
+window.KnifeSearch.site = window.__YD_CONTEXT.site || {};
+window.KnifeSearch.routes = window.__siteRoutes;
+</script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="applicable-device" content="mobile">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>iOS手机迅雷下载</title>
+    <link href="css/style.css?t=5" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="wrap">
+	<div class="banner">
+        <h1 class="ban_tit txt_hide">迅雷3亿用户的手机下载首选</h1>
+        <div class="ship_box">
+            <i class="icon_ship icon_spr"></i>
+            <i class="icon_slight icon_spr"></i>
+            <div class="icon_logo icon_logo1 logo_ani1">
+                <i class="icon_logo_in icon_spr"></i>
+            </div>
+        </div>
+        <a href="javascript:;" class="btn_nor btn_nor1 icon_spr">安装迅雷</a>
+	</div>
+
+  <div class="wp_pop" id="js_wp_pop" style="display: none;">
+    <div class="wp_pop_main">
+      <div class="pop_main">
+        <i class="icon_safari"></i>
+        <p class="pop_tips">请用Safari<br>浏览器开启</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<script>
+  var G_is_wx_yindaoye = true;
+</script>
+<script src="js/lib/zepto.min.js?t=1"></script>
+<script src="js/com.js?t=20170601_1509"></script>
+<script src="js/index.js?t=20170612_1713"></script>
+<script>
+  (function(){
+    var wrap =$(".wrap");
+    var html = $('html');
+    var w = $(window).width(),
+    h = $(window).height();
+    if( w == 768 ||  w == 1024 ){
+      html.attr('style', 'font-size:' + w / 9.5 + 'px !important');
+    }
+    else{
+      html.attr('style', 'font-size:' + w / 7.5 + 'px !important');
+    }
+    function fit(){
+      w = $(window).width();
+      h = $(window).height();
+      if(h>w){
+        wrap.removeClass('portrait').addClass('landscape');
+        wrap.width(w);
+        wrap.height(h);
+        if( w == 768 ||  w == 1024 ){
+          html.attr('style', 'font-size:' + w / 9.5 + 'px !important');
+        }else{
+          html.attr('style', 'font-size:' + w / 7.5 + 'px !important');
+        }
+      }
+      else{
+        wrap.addClass('portrait').removeClass('landscape');
+        wrap.width(h);
+        wrap.height(w);
+        html.attr('style', 'font-size:' + w / 11.36 + 'px !important');
+      }
+    }
+
+    //屏幕方向改变
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(evt, fit, false);
+
+  })();
+</script>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?83f6eede71468132bb37c064fd6a7ec3";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+</body>
+</html>
