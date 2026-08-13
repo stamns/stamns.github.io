@@ -2,10 +2,24 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=/sou.gs/index.html">
-<title>sou.gs 镜像</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sou.gs 镜像站</title>
+<style>
+  body { font-family: system-ui; text-align: center; padding: 50px; }
+  a { color: #0066cc; margin: 0 10px; }
+</style>
 </head>
 <body>
-<p>跳转到镜像首页… <a href="/sou.gs/index.html">点击进入</a></p>
+<h1>小豆搜索 镜像站</h1>
+<p><a href="/sou.gs/">首页</a> | <a href="/sou.gs/search/">搜索</a></p>
+<script>
+  // 客户端路由重定向
+  const path = window.location.pathname;
+  if (path === '/search' || path === '/search/') {
+    window.location.replace('/sou.gs/search/');
+  } else if (path === '/detail' || path === '/detail/') {
+    window.location.replace('/sou.gs/detail/');
+  }
+</script>
 </body>
 </html>
