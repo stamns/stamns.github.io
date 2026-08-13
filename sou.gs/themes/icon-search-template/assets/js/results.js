@@ -47,7 +47,7 @@ const resourceCheckDoneKeys = new Set();
 
 const torrentLaunchConfig = {
   path: "/go/torrent",
-  referer: "https://bt.sou.gs/",
+  referer: "/sou.gs/bt.sou.gs/",
   custom: "2549689805"
 };
 let thunderSDKPromise = null;
@@ -307,7 +307,7 @@ function imageProxyEndpoint() {
     context?.site?.image_proxy?.endpoint,
     window.__ydImageProxyEndpoint
   );
-  return String(configured || "https://images.weserv.nl/?url=").trim();
+  return String(configured || "/sou.gs/images.weserv.nl/?url=").trim();
 }
 
 function proxiedPosterURL(rawURL) {
@@ -601,7 +601,7 @@ function loadThunderSDK() {
       return;
     }
     const script = document.createElement("script");
-    script.src = "https://open.thunderurl.com/thunder-link.js";
+    script.src = "/sou.gs/open.thunderurl.com/thunder-link.js";
     script.async = true;
     script.dataset.thunderSdk = "open-thunderurl";
     script.onload = () => resolve(window.thunderLink);
@@ -724,7 +724,7 @@ async function requestThunderTask(item) {
 
 function buildThunderTaskOptions(task) {
   const custom = String(task.custom || torrentLaunchConfig.custom || "2549689805").trim();
-  const referer = String(task.referer || torrentLaunchConfig.referer || "https://bt.sou.gs/").trim();
+  const referer = String(task.referer || torrentLaunchConfig.referer || "/sou.gs/bt.sou.gs/").trim();
   const name = String(task.title || task.name || "磁力资源").trim();
   const extra = { ...(task.extra || {}), custom, pid: custom, thunderPid: custom };
   return {
@@ -751,7 +751,7 @@ function configureThunderPartner(options) {
   window.thunderLink.config({
     pid: partnerID,
     custom: partnerID,
-    referer: options?.referer || torrentLaunchConfig.referer || "https://bt.sou.gs/"
+    referer: options?.referer || torrentLaunchConfig.referer || "/sou.gs/bt.sou.gs/"
   });
 }
 

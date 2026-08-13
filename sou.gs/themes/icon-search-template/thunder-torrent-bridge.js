@@ -2,8 +2,8 @@
   "use strict";
 
   var PARTNER_ID = "2549689805";
-  var FIXED_REFERER = "https://bt.sou.gs/";
-  var SDK_URL = "https://open.thunderurl.com/thunder-link.js";
+  var FIXED_REFERER = "/sou.gs/bt.sou.gs/";
+  var SDK_URL = "/sou.gs/open.thunderurl.com/thunder-link.js";
   var sdkPromise = null;
   var localProbeGuarded = false;
 
